@@ -10,7 +10,7 @@ from lib.communication import serial_write
 
 config = {}
 
-load_config_from_file = True
+load_config_from_file = False
 
 today = None
 queue = []
@@ -38,6 +38,8 @@ if __name__ == "__main__":
                 config = json.load(config_json)
         else:
             config = setup_config(source)
+        
+        print(json.dumps(config, indent=2))
         
         while True:
             command = False # check button press from serial

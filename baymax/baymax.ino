@@ -4,7 +4,7 @@ Robo-Tech 2023 @ GT
 */
 
 #define bitRead(value, bit) (((value) >> (bit)) & 0b01)
-#define opCode(value) (((value) >> (6)) & 0b11)
+#define opCode(value) (((value) >> (6)))
 
 int[] servoPins   = {0, 1, 2, 3, 4, 5}
 int[] fAidPins    = {0, 0, 0, 0, 0, 0}

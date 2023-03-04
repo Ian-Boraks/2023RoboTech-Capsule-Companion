@@ -3,6 +3,7 @@ import gtts
 from io import BytesIO 
 from pydub import AudioSegment
 from pydub.playback import play
+import whisper
 
 def setup_microphone():
     r = sr.Recognizer()
@@ -15,30 +16,27 @@ def setup_microphone():
     #r.non_speaking_duration = 0.5
     return r
 
-def listen_and_recognize_whisper(r, from_code):
-    with sr.Microphone() as source:
-        print("listening...")
-        audio = r.listen(source)
-        print("Started Listening...")
-        try:
-            print("recognizing...")
-            text = r.recognize_whisper(audio, model="tiny", language=from_code)
-            if len(text) > 0:
-                print(text)
-                return text
-        except:
-            print("text not > 0")
+model = whisper.load_model("base.en")
 
-def recognize_whisper_from_file(r, file_name, from_code):
+def listen_and_recognize_whisper(r: sr.Recognizer, from_code: str):
+    with sr.Microphone() as source:
+        print("Listening...")
+        audio = r.listen(source)
+        with open("temp.wav", "wb") as f:
+            f.write(audio.get_wav_data())
+            f.flush()
+            print("Recognizing...")
+            result = model.transcribe(f.name)
+            print(result['text'])
+
+def recognize_whisper_from_file(r: sr.Recognizer, file_name: str, from_code: str):
     with sr.AudioFile(file_name) as source:
         audio = r.record(source)
-        try:
-            text = r.recognize_whisper(audio, model="tiny", language=from_code)
-            if len(text) > 0:
-                print(text)
-                return text
-        except:
-            print("text not > 0")
+        with open("temp.wav", "wb") as f:
+            f.write(audio.get_wav_data())
+            f.flush()
+            result = model.transcribe(f.name)
+            print(result['text'])
 
 def say(text, to_code):
     tts = gtts.gTTS(text, lang=to_code)
@@ -58,6 +56,4 @@ def main():
             say(text, "en")
 
 if __name__ == '__main__':
-    #main()
-    text = recognize_whisper_from_file(setup_microphone(), 'Overlapping Audio Test.wav', "en")
-    #say(text, "en")
+    main()

@@ -12,6 +12,10 @@ model = whisper.load_model("small.en")
 
 state = "listening"
 
+def init_recognizer(source: sr.AudioSource):
+    print("Adjusting...")
+    r.adjust_for_ambient_noise(source, duration=1)
+
 def transcribe(source: sr.AudioSource):
     if state == "command" or state == "repeat":
         afile = AudioSegment.from_wav("assets/beep.wav")
@@ -57,23 +61,18 @@ def handle_therapy(text: str):
     print("Response:", res)
     say(res)
     return "therapy"
-    
-def start_loop():
-    global state
-    with sr.Microphone() as source:
-        print("Adjusting...")
-        r.adjust_for_ambient_noise(source, duration=1)
-        
-        while True:
-            text = transcribe(source).lower()
-            print("Heard:", text)
 
-            if text:
-                if state == "listening":
-                    state = handle_listening(text)
-                elif state == "command":
-                    state = handle_command(text)
-                elif state == "repeat":
-                    state = handle_repeat(text)
-                elif state == "therapy":
-                    state = handle_therapy(text)
+def next_state(source: sr.AudioSource):
+    global state
+    text = transcribe(source).lower()
+    print("Heard:", text)
+
+    if text:
+        if state == "listening":
+            state = handle_listening(text)
+        elif state == "command":
+            state = handle_command(text)
+        elif state == "repeat":
+            state = handle_repeat(text)
+        elif state == "therapy":
+            state = handle_therapy(text)

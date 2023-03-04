@@ -1,0 +1,40 @@
+{
+  "schedule": {
+    "monday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    },
+    "tuesday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    },
+    "wednesday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    },
+    "thursday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    },
+    "friday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    },
+    "saturday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    },
+    "sunday": {
+      "pills": [],
+      "trainer": "",
+      "therapist": ""
+    }
+  },
+  "pills": {}
+}

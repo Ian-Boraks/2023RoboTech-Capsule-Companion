@@ -1,4 +1,4 @@
-import threading
+import json
 import speech_recognition as sr
 from dotenv import load_dotenv
 from datetime import datetime
@@ -10,6 +10,8 @@ from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.communication import serial_write
 
 config = {}
+
+load_config_from_file = True
 
 today = None
 state = {
@@ -26,12 +28,18 @@ if __name__ == "__main__":
         init_recognizer(source)
         init_openai()
 
-        config = setup_config(source)
+        if load_config_from_file:
+            with open("config.json") as config_json:
+                config = json.load(config_json)
+        else:
+            config = setup_config(source)
+        
+        print(config)
         
         while True:
             command = True # check button press from serial
             if command:
-                run_command()
+                run_command(source)
 
             now = datetime.now()
 

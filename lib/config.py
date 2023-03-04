@@ -13,8 +13,8 @@ def gen_empty_config():
     for day in DAYS_OF_THE_WEEK:
         config["schedule"][day] = {
             "pills": [],
-            "trainer": [],
-            "therapist": [],
+            "trainer": "",
+            "therapist": "",
         }
     return config
 
@@ -66,7 +66,7 @@ def setup_config(source: sr.AudioSource):
             hour = timelist[0] * 10 + timelist[1]
             minute = timelist[2] * 10 + timelist[3]
             
-            day["pills"].append([time(hour, minute), pill])
+            day["pills"].append([f"{hour}:{minute}", pill])
             pills_to_map.add(pill)
         
         print(i, day["pills"])

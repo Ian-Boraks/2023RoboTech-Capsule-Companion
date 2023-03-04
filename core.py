@@ -1,5 +1,4 @@
 import speech_recognition as sr
-import googletrans
 import gtts  
 import threading
 from io import BytesIO 
@@ -22,9 +21,10 @@ def listen_and_recognize_whisper(r, from_code):
     with sr.Microphone() as source:
         print("listening...")
         audio = r.listen(source)
+        print("Started Listening...")
         try:
             print("recognizing...")
-            text = r.recognize_whisper(audio, model="small", language=from_code)
+            text = r.recognize_whisper(audio, model="tiny", language=from_code)
             if len(text) > 0:
                 print(text)
                 return text
@@ -35,7 +35,7 @@ def recognize_whisper_from_file(r, file_name, from_code):
     with sr.AudioFile(file_name) as source:
         audio = r.record(source)
         try:
-            text = r.recognize_whisper(audio, model="small", language=from_code)
+            text = r.recognize_whisper(audio, model="tiny", language=from_code)
             if len(text) > 0:
                 print(text)
                 return text
@@ -61,3 +61,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    #text = recognize_whisper_from_file(setup_microphone(), 'Overlapping Audio Test.wav', "en")
+    #say(text, "en")

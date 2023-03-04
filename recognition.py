@@ -2,12 +2,9 @@ import gtts
 import speech_recognition as sr
 import whisper
 import sys
-from dotenv import load_dotenv
 from io import BytesIO
 from pydub import AudioSegment
 from pydub.playback import play
-
-load_dotenv()
 
 r = sr.Recognizer()
 model = whisper.load_model("small.en")
@@ -59,7 +56,7 @@ def recognize_continuous(source: sr.AudioSource):
             say("yes?", "en")
             recognize_command(source)
     
-if __name__ == '__main__':
+def start_loop():
     with sr.Microphone() as source:
         print("Adjusting...")
         r.adjust_for_ambient_noise(source, duration=1)

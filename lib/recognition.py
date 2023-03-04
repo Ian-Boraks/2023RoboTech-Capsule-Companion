@@ -1,14 +1,13 @@
-import gtts
 import speech_recognition as sr
 import whisper
 import sys
-from io import BytesIO
 from pydub import AudioSegment
 from pydub.playback import play
 
+from speech import say
+
 r = sr.Recognizer()
 model = whisper.load_model("small.en")
-lang = "en"
 
 state = "listening"
 
@@ -24,14 +23,6 @@ def transcribe(source: sr.AudioSource, beep=False):
         print("Recognizing...")
         result = model.transcribe(f.name)
         return result["text"]
-
-def say(text: str):
-    tts = gtts.gTTS(text, lang=lang)
-    fp = BytesIO()
-    tts.write_to_fp(fp)
-    fp.seek(0)
-    aud = AudioSegment.from_file(fp, format="mp3")
-    play(aud)
 
 def handle_listening(text: str):
     if "buzz" in text:

@@ -9,7 +9,7 @@ DAYS_OF_THE_WEEK = ["monday", "tuesday", "wednesday", "thursday", "friday", "sat
 def gen_empty_config():
     config = {"schedule": {}}
     for day in DAYS_OF_THE_WEEK:
-        config[day] = {
+        config["schedule"][day] = {
             "pills": [],
             "trainer": [],
             "therapist": [],

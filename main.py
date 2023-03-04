@@ -24,9 +24,6 @@ def setup_tasks_for_day(day):
     queue.append([day["therapist"], "therapist"])
     queue.append([day["trainer"], "trainer"])
     queue.sort()
-    print(queue)
-    
-
 
 if __name__ == "__main__":
     load_dotenv()
@@ -54,17 +51,17 @@ if __name__ == "__main__":
                 day = config["schedule"][DAYS_OF_THE_WEEK[now.weekday()]]
                 today = now.date()
                 setup_tasks_for_day(day)
+                print("Setup tasks for", DAYS_OF_THE_WEEK[now.weekday()])
 
             # logic
             while len(queue) != 0:
                 if queue[0][0] <= datetime.now().strftime("%H:%M"):
                     current_task = queue.pop(0)
                     if current_task[1] == "pills":
-                        
                         continue
-                    elif current_task[1] == "therpist":
-                        run_therapy()
-                    elif current_task[2] == "trainer":
+                    elif current_task[1] == "therapist":
+                        run_therapy(source, current_task[0])
+                    elif current_task[1] == "trainer":
                         continue
                 else:
                     break

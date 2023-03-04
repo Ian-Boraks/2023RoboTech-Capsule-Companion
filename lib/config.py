@@ -1,4 +1,3 @@
-import re
 import speech_recognition as sr
 
 from .recognition import transcribe
@@ -7,7 +6,7 @@ from .speech import say
 DAYS_OF_THE_WEEK = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 def gen_empty_config():
-    config = {"schedule": {}}
+    config = {"schedule": {}, "pills": []}
     for day in DAYS_OF_THE_WEEK:
         config["schedule"][day] = {
             "pills": [],
@@ -22,7 +21,7 @@ def get_input(source: sr.AudioSource, prompt: str, split=False):
         say(prompt)
         text = transcribe(source)
     if split:
-        return [i.strip().lower() for i in re.split(",|and|, and", text)]
+        return [i.lower() for i in text.replace(",", "").split(" ")]
     return text
 
 def setup_config(source: sr.AudioSource):
@@ -32,13 +31,16 @@ def setup_config(source: sr.AudioSource):
     say("We are going to start setup now.")
 
     days = get_input(source, "What days do you take medications?", split=True)
+    days = [i for i in days if i in DAYS_OF_THE_WEEK]
 
     for i in days:
         day = config["schedule"][i]
         
-        pills = get_input(source, f"What medication do you take on {DAYS_OF_THE_WEEK[i]}?", split=True)
+        pills = get_input(source, f"What medication do you take on {i}?", split=True)
+        pills = [i for i in pills if i != "and"]
+        print(f"{i} pills:", pills)
         for pill in pills:
             # voice recigntion time 
-            time = get_input(f"What time do you take {pill}?")
+            time = get_input(source, f"What time do you take {pill}?")
             # TODO: Convert time to 24 hour format
             day["pills"].append([time, pill])

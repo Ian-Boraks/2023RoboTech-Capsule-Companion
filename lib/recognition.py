@@ -11,7 +11,7 @@ model = whisper.load_model("small.en")
 
 def transcribe(source: sr.AudioSource, from_code: str, beep=False):
     if beep:
-        afile = AudioSegment.from_wav("beep.wav")
+        afile = AudioSegment.from_wav("assets/beep.wav")
         play(afile)
     print("Listening...")
     audio = r.listen(source)

@@ -60,6 +60,6 @@ def main():
             say(text, "en")
 
 if __name__ == '__main__':
-    main()
-    #text = recognize_whisper_from_file(setup_microphone(), 'Overlapping Audio Test.wav', "en")
+    #main()
+    text = recognize_whisper_from_file(setup_microphone(), 'Overlapping Audio Test.wav', "en")
     #say(text, "en")

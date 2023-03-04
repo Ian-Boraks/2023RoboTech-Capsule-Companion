@@ -2,3 +2,4 @@ venv
 .vscode
 temp.wav
 __pycache__
+.env

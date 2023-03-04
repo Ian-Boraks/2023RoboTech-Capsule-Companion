@@ -26,9 +26,30 @@
       "therapist": ""
     },
     "saturday": {
-      "pills": [],
-      "trainer": "",
-      "therapist": ""
+      "pills": [
+        [
+          "12:00",
+          "xanax"
+        ],
+        [
+          "13:00",
+          "tylenol"
+        ],
+        [
+          "12:00",
+          "advil"
+        ],
+        [
+          "13:00",
+          "cocaine"
+        ],
+        [
+          "11:00",
+          "cocaine"
+        ]
+      ],
+      "therapist": "11:00",
+      "trainer": "15:00"
     },
     "sunday": {
       "pills": [],

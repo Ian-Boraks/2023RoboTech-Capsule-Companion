@@ -17,6 +17,7 @@ PILLS = {
 }
 
 config = setup_week()
+current_day = "MONDAY"
 
 
 def speech_recognition():

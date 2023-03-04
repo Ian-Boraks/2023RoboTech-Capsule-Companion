@@ -1,10 +1,8 @@
 import speech_recognition as sr
-import gtts  
-import threading
+import gtts
 from io import BytesIO 
 from pydub import AudioSegment
 from pydub.playback import play
-import sys
 
 def setup_microphone():
     r = sr.Recognizer()

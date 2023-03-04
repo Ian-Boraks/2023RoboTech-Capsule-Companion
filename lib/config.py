@@ -9,7 +9,7 @@ from .speech import say
 DAYS_OF_THE_WEEK = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 def gen_empty_config():
-    config = {"schedule": {}, "pills": []}
+    config = {"schedule": {}, "pills": {}}
     for day in DAYS_OF_THE_WEEK:
         config["schedule"][day] = {
             "pills": [],
@@ -69,6 +69,4 @@ def setup_config(source: sr.AudioSource):
             day["pills"].append([f"{hour}:{minute}", pill])
             pills_to_map.add(pill)
         
-        print(i, day["pills"])
     config["pills"] = create_pill_map(source, pills_to_map)
-    print(config["pills"])

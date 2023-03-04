@@ -2,10 +2,9 @@ import json
 import speech_recognition as sr
 from dotenv import load_dotenv
 from datetime import datetime
-from time import sleep
 
 from lib.chat import init_openai
-from lib.recognition import init_recognizer, run_command
+from lib.recognition import init_recognizer, run_command, run_therapy
 from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.communication import serial_write
 
@@ -14,11 +13,18 @@ config = {}
 load_config_from_file = True
 
 today = None
-state = {
-    "pills": [],
-    "trainer": [],
-    "therapist": [],
-}
+queue = []
+
+def setup_tasks_for_day(day):
+    for task in day["pills"]:
+        temp = task.copy()
+        temp.insert(1, "pills")
+        queue.append(temp)
+    
+    queue.append([day["therapist"], "therapist"])
+    queue.append([day["trainer"], "trainer"])
+    queue.sort()
+    
 
 
 if __name__ == "__main__":
@@ -34,20 +40,28 @@ if __name__ == "__main__":
         else:
             config = setup_config(source)
         
-        print(config)
-        
         while True:
-            command = True # check button press from serial
+            command = False # check button press from serial
             if command:
                 run_command(source)
 
             now = datetime.now()
 
             if now.date() != today:
-                day = config[DAYS_OF_THE_WEEK[now.weekday()]]
+                day = config["schedule"][DAYS_OF_THE_WEEK[now.weekday()]]
                 today = now.date()
-                state["pills"] = [False for i in day["pills"]]
-                state["therapist"] = [False for i in day["therapist"]]
-                state["trainer"] = [False for i in day["trainer"]]
+                setup_tasks_for_day(day)
+                print("Setup tasks for", DAYS_OF_THE_WEEK[now.weekday()])
 
             # logic
+            while len(queue) != 0:
+                if queue[0][0] <= datetime.now().strftime("%H:%M"):
+                    current_task = queue.pop(0)
+                    if current_task[1] == "pills":
+                        serial_write("pills", sum([2**config['pills'][pill] for pill in current_task[2]]))
+                    elif current_task[1] == "therapist":
+                        run_therapy(source, current_task[0])
+                    elif current_task[1] == "trainer":
+                        continue
+                else:
+                    break

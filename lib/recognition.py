@@ -57,6 +57,22 @@ def handle_therapy(text: str):
     say(res)
     return "therapy"
 
+def run_therapy(source: sr.AudioSource, time: str):
+    hour = int(time[:2])
+    timestr = ""
+    if hour > 11:
+        timestr = f"{hour - 12}{time[2:]} PM"
+    else:
+        timestr = f"{time} AM"
+    say(f"Welcome to your {timestr} therapy session!")
+
+    global state
+    state = "therapy"
+    while state != "idle":
+        text = transcribe(source)
+        if text:
+            state = handle_therapy(text)
+
 def run_command(source: sr.AudioSource):
     global state
     state = "command"

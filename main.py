@@ -19,26 +19,6 @@ state = {
 }
 
 
-def pill_loop(): # copy-pasted from main loop - change this
-    while True:
-        continue # temporary
-
-
-        # use config and state for this
-
-        current_task = day.pop(0)
-        task_time = current_task[0]
-
-        while task_time < datetime.now().strftime("%H:%M"):
-            sleep(1)
-        
-        s = sum([2**PILLS[key] for key in current_task[2]])
-        task = current_task[1]
-
-        if task == "PILLS":
-            serial_write(current_task[1], sum([2**PILLS[key] for key in current_task[2]]))
-
-
 if __name__ == "__main__":
     load_dotenv()
 
@@ -47,8 +27,6 @@ if __name__ == "__main__":
         init_openai()
 
         config = setup_config(source)
-
-        pill_thread = threading.Thread(target=pill_loop, name="pill_loop").start()
         
         while True:
             command = True # check button press from serial
@@ -56,7 +34,7 @@ if __name__ == "__main__":
                 run_command()
 
             now = datetime.now()
-            
+
             if now.date() != today:
                 day = config[DAYS_OF_THE_WEEK[now.weekday()]]
                 today = now.date()

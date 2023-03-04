@@ -5,29 +5,45 @@ from lib.recognition import start_loop
 
 pills = { }
 
+day = []
+
 config = {
-    "PILLS": {
-        "MONDAY": [
-            0, []
-        ],
-        "TUESDAY": [
-            0, []
-        ],
-        "WEDNESDAY": [
-            0, []
-        ],
-        "THURSDAY": [
-            0, []
-        ],
-        "FRIDAY": [
-            0, []
-        ],
-        "SATURDAY": [
-            0, []
-        ],
-        "SUNDAY": [
-            0, []
-        ]
+    "SCHEDULE" : {
+        "MONDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        },
+        "TUESDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        },
+        "WEDNESDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        },
+        "THURSDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        },
+        "FRIDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        },
+        "SATURDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        },
+        "SUNDAY" : {
+            "PILLS" : [[0, []]],
+            "TRAINER": [[0, []]],
+            "THERAPIST" : [[0]]
+        }
     }
 }
 

@@ -1,6 +1,8 @@
+import re
 import speech_recognition as sr
+from datetime import time
 
-from.communication import serial_write
+from .communication import serial_write
 from .recognition import transcribe
 from .speech import say
 
@@ -21,13 +23,14 @@ def create_pill_map(source: sr.AudioSource, pills_to_map: set):
     container = 0
     for pill in pills_to_map:
         pills[pill] = container
-        serial_write("pills", 2**container)
+        serial_write("pills", 1 << container)
         say(f"Please dispense your {pill} into container {container + 1}")
-        finished = get_input(source, f"Let me know once you're finished!", split=False)
-        if finished.contains("done"):
-            serial_write("pills", 0)
-            container += 1
-            continue
+
+        done = ''
+        while not ("done" in done or "finished" in done):
+            done = get_input(source, f"Let me know once you're finished!")
+        serial_write("pills", 0)
+        container += 1
     
     return pills
 
@@ -38,29 +41,34 @@ def get_input(source: sr.AudioSource, prompt: str, split=False):
         say(prompt)
         text = transcribe(source)
     if split:
-        return [i.lower() for i in text.replace(",", "").split(" ")]
+        return [i.lower() for i in re.sub("[,.!?]", "", text).split(" ") if len(i) > 0]
     return text
 
 def setup_config(source: sr.AudioSource):
     config = gen_empty_config()
-    pills_to_map = set()
     say("Thank you for choosing BUZZ as your trusted personal helper.")
     say("We are going to start setup now.")
 
     days = get_input(source, "What days do you take medications?", split=True)
     days = [i for i in days if i in DAYS_OF_THE_WEEK]
 
+    pills_to_map = set()
     for i in days:
         day = config["schedule"][i]
         
         pills = get_input(source, f"What medication do you take on {i}?", split=True)
-        pills = [i for i in pills if i != "and"]
-        print(f"{i} pills:", pills)
+        pills = [j for j in pills if j != "and"]
         for pill in pills:
-            # voice recigntion time 
-            time = get_input(source, f"What time do you take {pill}?")
-            # TODO: Convert time to 24 hour format
-            day["pills"].append([time, pill])
-            pills_to_map.append(pill)
-        # TODO: Return this
-        pills = create_pill_map(source, pills_to_map)
+            timelist = []
+            while len(timelist) < 4:
+                timelist = get_input(source, f"What time do you take {pill}?")
+                timelist = [int(j) for j in timelist if j.isdigit()]
+            hour = timelist[0] * 10 + timelist[1]
+            minute = timelist[2] * 10 + timelist[3]
+            
+            day["pills"].append([time(hour, minute), pill])
+            pills_to_map.add(pill)
+        
+        print(i, day["pills"])
+    config["pills"] = create_pill_map(source, pills_to_map)
+    print(config["pills"])

@@ -24,7 +24,6 @@ def setup_tasks_for_day(day):
     queue.append([day["therapist"], "therapist"])
     queue.append([day["trainer"], "trainer"])
     queue.sort()
-    
 
 
 if __name__ == "__main__":
@@ -58,7 +57,8 @@ if __name__ == "__main__":
                 if queue[0][0] <= datetime.now().strftime("%H:%M"):
                     current_task = queue.pop(0)
                     if current_task[1] == "pills":
-                        serial_write("pills", sum([2**config['pills'][pill] for pill in current_task[2]]))
+                        bit_array = [1 << config['pills'][pill] for pill in current_task[2]]
+                        serial_write("pills", sum(bit_array))
                     elif current_task[1] == "therapist":
                         run_therapy(source, current_task[0])
                     elif current_task[1] == "trainer":

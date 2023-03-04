@@ -10,14 +10,14 @@ from .speech import say
 r = sr.Recognizer()
 model = whisper.load_model("small.en")
 
-state = "listening"
+state = "idle"
 
 def init_recognizer(source: sr.AudioSource):
     print("Adjusting...")
     r.adjust_for_ambient_noise(source, duration=1)
 
-def transcribe(source: sr.AudioSource):
-    if state == "command" or state == "repeat":
+def transcribe(source: sr.AudioSource, beep=False):
+    if beep:
         afile = AudioSegment.from_wav("assets/beep.wav")
         play(afile)
     print("Listening...")
@@ -27,13 +27,8 @@ def transcribe(source: sr.AudioSource):
         f.flush()
         print("Recognizing...")
         result = model.transcribe(f.name)
-        return result["text"]
-
-def handle_listening(text: str):
-    if "buzz" in text:
-        say("yes?")
-        return "command"
-    return "listening"
+        print("Heard:", result["text"])
+        return result["text"].lower()
 
 def handle_command(text: str):
     if "exit" in text:
@@ -49,30 +44,30 @@ def handle_command(text: str):
 
 def handle_repeat(text: str):
     say(text)
-    return "listening"
+    return "idle"
 
 def handle_therapy(text: str):
-    if "exit" in text:
+    if "end session" in text:
         reset_messages()
         say("ending session")
-        return "listening"
+        return "idle"
     print("Generating Response...")
     res = add_message(text)
     print("Response:", res)
     say(res)
     return "therapy"
 
-def next_state(source: sr.AudioSource):
+def run_command(source: sr.AudioSource):
     global state
-    text = transcribe(source).lower()
-    print("Heard:", text)
+    state = "command"
+    while state != "idle":
+        beep = state == "command" or state == "repeat"
+        text = transcribe(source, beep)
 
-    if text:
-        if state == "listening":
-            state = handle_listening(text)
-        elif state == "command":
-            state = handle_command(text)
-        elif state == "repeat":
-            state = handle_repeat(text)
-        elif state == "therapy":
-            state = handle_therapy(text)
+        if text:
+            if state == "command":
+                state = handle_command(text)
+            elif state == "repeat":
+                state = handle_repeat(text)
+            elif state == "therapy":
+                state = handle_therapy(text)

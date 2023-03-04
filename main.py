@@ -1,71 +1,67 @@
 import threading
 import speech_recognition as sr
 from dotenv import load_dotenv
-from datetime import datetime
+from datetime import date, time, datetime
 from time import sleep
 
 from lib.chat import init_openai
-from lib.recognition import init_recognizer, next_state
-from lib.setup import setup_week, setup_day
+from lib.recognition import init_recognizer, run_command
+from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.communication import serial_write
 
-DAYS_OF_THE_WEEK = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
-PILLS = {
-    "advil": 0,
-    "tylenol": 1,
-    "xanax": 2
+config = {}
+
+today = None
+state = {
+    "pills": [],
+    "trainer": [],
+    "therapist": [],
 }
 
-config = setup_week()
 
-# TODO: Somthing like this for grabing pill data
-PILLS = config["PILLS"]
+def pill_loop(): # copy-pasted from main loop - change this
+    while True:
+        continue # temporary
 
 
-def speech_recognition():
-    with sr.Microphone() as source:
-        init_recognizer(source)
-        init_openai()
+        # use config and state for this
+
+        current_task = day.pop(0)
+        task_time = current_task[0]
+
+        while task_time < datetime.now().strftime("%H:%M"):
+            sleep(1)
         
-        while True:
-            next_state(source)
+        s = sum([2**PILLS[key] for key in current_task[2]])
+        task = current_task[1]
+
+        if task == "PILLS":
+            serial_write(current_task[1], sum([2**PILLS[key] for key in current_task[2]]))
+
 
 if __name__ == "__main__":
     load_dotenv()
 
-    speech_recognition_thread = threading.Thread(
-        target=speech_recognition, name="speech_recognition").start()
+    with sr.Microphone() as source:
+        init_recognizer(source)
+        init_openai()
 
-    update_day = True
-    day = None
-    while True:
-        if update_day:
-            day = setup_day(config["SCHEDULE"][DAYS_OF_THE_WEEK[datetime.today().weekday()]])
-            update_day = False
+        config = setup_config(source)
 
-        if len(day) != 0:
-            '''
-            day_of_week =  
-                "MONDAY" : {
-                    "PILLS" : [[0, []]],
-                    "TRAINER": [[0, []]],
-                    "THERAPIST" : [[0]]
-                } 
-            '''
-
-            current_task = day.pop(0)
-            task_time = current_task[0]
-
-            while task_time < datetime.now().strftime("%H:%M"):
-                sleep(1)
-            
-            s = sum([2**PILLS[key] for key in current_task[2]])
-            task = current_task[1]
-
-            if task == "PILLS":
-                serial_write(current_task[1], sum([2**PILLS[key] for key in current_task[2]]))
-        else:
-            update_day = True
-
+        pill_thread = threading.Thread(target=pill_loop, name="pill_loop").start()
         
+        while True:
+            command = True # check button press from serial
+            if command:
+                run_command()
 
+            now = datetime.now()
+            
+            if now.date() != today:
+                day = config[DAYS_OF_THE_WEEK[now.weekday()]]
+                today = now.date()
+                state["pills"] = [False for i in day["pills"]]
+                state["therapist"] = [False for i in day["therapist"]]
+                state["trainer"] = [False for i in day["trainer"]]
+
+            # logic

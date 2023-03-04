@@ -48,6 +48,9 @@ def setup_day(day_of_week):
              "THERAPIST" : [[0]]
          } 
     '''
-    t = day_of_week["PILLS"].copy()
-    [x.insert(1, "pills") for x in t]
-    return t
+    tempArray = day_of_week["PILLS"].copy()
+    tempArray.append(day_of_week["TRAINER"].copy())
+    tempArray.append(day_of_week["THERAPIST"].copy())
+
+    [event.insert(1, "PILLS") for event in tempArray]
+    return sorted(tempArray)

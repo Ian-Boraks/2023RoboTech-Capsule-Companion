@@ -41,14 +41,26 @@ if __name__ == "__main__":
             update_day = False
 
         if len(day) != 0:
+            '''
+            day_of_week =  
+                "MONDAY" : {
+                    "PILLS" : [[0, []]],
+                    "TRAINER": [[0, []]],
+                    "THERAPIST" : [[0]]
+                } 
+            '''
+
             current_task = day.pop(0)
             task_time = current_task[0]
 
-            while task_time != datetime.now().strftime("%H:%M"):
+            while task_time < datetime.now().strftime("%H:%M"):
                 sleep(1)
             
-            s = sum([2**PILLS[x] for x in current_task[2]])
-            serial_write(current_task[1], sum([2**PILLS[x] for x in current_task[2]]))
+            s = sum([2**PILLS[key] for key in current_task[2]])
+            task = current_task[1]
+
+            if task == "PILLS":
+                serial_write(current_task[1], sum([2**PILLS[key] for key in current_task[2]]))
         else:
             update_day = True
 

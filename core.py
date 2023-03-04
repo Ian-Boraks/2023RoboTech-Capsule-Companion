@@ -54,6 +54,10 @@ def main():
     print("Starting...")
     r = setup_microphone()
     while True:
-        text = listen_and_recognize_whisper(r, from_code)
+        text = listen_and_recognize_whisper(r, "en")
         if text:
             print("Spoken: ", text)
+            say(text, "en")
+
+if __name__ == '__main__':
+    main()

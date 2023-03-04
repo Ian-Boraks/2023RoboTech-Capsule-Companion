@@ -18,6 +18,9 @@ PILLS = {
 
 config = setup_week()
 
+# TODO: Somthing like this for grabing pill data
+PILLS = config["PILLS"]
+
 
 def speech_recognition():
     with sr.Microphone() as source:

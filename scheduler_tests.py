@@ -1,6 +1,6 @@
 '''
 Designed by The Psychedelic Psychologist
-Robo-Tech 2023 @ GT
+RoboTech 2023 @ GT
 '''
 
 import datetime as dt

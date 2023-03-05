@@ -8,7 +8,7 @@ Robo-Tech 2023 @ GT
 #define bitRead(value, bit) (((value) >> (bit)) & 0b01)
 #define opCode(value) (((value) >> (6)))
 
-#define TURN_TIME 1000
+#define TURN_TIME 4500
 
 Servo servos[] = {Servo(), Servo(), Servo(), Servo(), Servo(), Servo()};
 

@@ -46,6 +46,7 @@ def setup_tasks_for_day(day):
 
 def main():
     global config, today
+    sleep(7)
 
     with sr.Microphone() as source:
         init_recognizer(source)

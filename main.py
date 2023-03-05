@@ -19,7 +19,7 @@ from lib.video import play_video
 
 config = {}
 
-load_config_from_file = True
+load_config_from_file = False
 
 today = None
 queue = []
@@ -80,7 +80,7 @@ def main():
                         serial_write("pills", sum(bit_array))
                         sleep(10)
                     elif current_task[1] == "therapist":
-                        run_therapy(source, current_task[0])
+                        run_therapy(source, current_task[0], first_time=True)
                     elif current_task[1] == "trainer":
                         continue
                 else:

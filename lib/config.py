@@ -43,7 +43,7 @@ def get_input(source: sr.AudioSource, prompt: str, split=False):
     text = ""
     while len(text) == 0:
         say(prompt)
-        text = transcribe(source)
+        text = transcribe(source, False, True)
     if split:
         return [i.lower() for i in re.sub("[,.!?]", "", text).split(" ") if len(i) > 0]
     return text

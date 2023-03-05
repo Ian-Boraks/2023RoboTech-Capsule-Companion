@@ -39,4 +39,10 @@ def add_message(message: str):
 
 def reset_messages():
   global messages
+<<<<<<< HEAD
   messages = messages_init
+=======
+  messages = messages_init
+
+
+>>>>>>> afd2de9 (Add audio cutoff on setup)

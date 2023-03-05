@@ -86,7 +86,7 @@ def setup_config(source: sr.AudioSource):
     days = get_input(source, "Moving on. What days would you like a therapy session?", split=True)
     days = [i for i in days if i in DAYS_OF_THE_WEEK]
     for i in days:
-        config["schedule"][i]["therapist"] = get_time_input(f"What time would you like your session on {i}?")
+        config["schedule"][i]["therapist"] = get_time_input(source, f"What time would you like your session on {i}?")
         
     config["pills"] = create_servo_map(source, pill_set)
 

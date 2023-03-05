@@ -26,7 +26,9 @@ def play_video():
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         else:
+            video = cv2.VideoCapture('assets/idle.mp4')
             video.set(cv2.CAP_PROP_POS_FRAMES, 0)
+            
 
     video.release()
     cv2.destroyAllWindows()

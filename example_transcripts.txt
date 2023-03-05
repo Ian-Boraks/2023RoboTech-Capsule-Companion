@@ -1,0 +1,411 @@
+Simple Example:
+
+User: Hey
+
+Buzz: Hello Abhinav, how are you feeling today?
+
+User: Not great
+
+Buzz: I'm sorry to hear that. Would you like to talk about what's been bothering you?
+
+User: Yeah, I've been very busy with coursework, personal projects, and life in general
+
+Buzz: It sounds like you have a lot on your plate right now. How has this been affecting your mood and daily activities?
+
+User: I've been very down for the past couple days. I've been losing motivation to do things I usually enjoy doing and I've been sleeping less. I try to help my anxiety and stress by taking breaks, but it usually leads to me doom scrolling or binge watching TV shows
+
+Buzz: It's understandable that you're feeling down and unmotivated. It's good that you're taking breaks, but it's important to make sure that those breaks are actually helping you recharge. It seems like you're turning to activities that may not be the most helpful in managing your anxiety and stress. Have you tried any other coping mechanisms that have worked for you in the past?
+
+User: No
+
+Buzz: Okay, that's alright. We can work together to explore some new coping mechanisms that might be helpful for you. Some techniques that have been shown to be effective in managing anxiety and stress include deep breathing exercises, mindfulness meditation, and progressive muscle relaxation. Would you be interested in trying any of these techniques?
+
+User: Sure
+
+Buzz: Great! Let's start with deep breathing exercises. This technique involves taking slow, deep breaths to help calm your mind and body. I'll guide you through a simple exercise:
+
+1. Find a comfortable seated position, either in a chair or on the floor with your back straight and your feet flat on the ground.
+
+2. Place one hand on your chest and the other on your stomach.
+
+3. Take a slow, deep breath in through your nose, feeling your stomach expand as you inhale.
+
+4. Hold your breath for a few seconds.
+
+5. Slowly exhale through your mouth, feeling your stomach contract as you exhale.
+
+6. Repeat this process for a few minutes, focusing on the sensation of your breath moving in and out of your body.
+
+How did that feel?
+
+User: It felt great
+
+Buzz: I'm glad to hear that! Deep breathing exercises can be a great way to calm your mind and body when you're feeling stressed or anxious. Would you like to try another technique, or do you have any questions about this one?
+
+User: No, I think that was great! But, how would that help me manage my stress or all the things on my plate?
+
+Buzz: That's a great question. Deep breathing exercises can help to reduce the physical symptoms of stress and anxiety, such as rapid heartbeat and shallow breathing. By focusing on your breath, you can also help to calm your mind and reduce racing thoughts. This can help you to feel more centered and focused, which can make it easier to tackle the tasks on your to-do list. Additionally, taking a few minutes to practice deep breathing can give you a much-needed break from the demands of your day, which can help you to feel more refreshed and energized when you return to your work.
+
+User: Oh okay cool! Thank you!
+
+Buzz: You're welcome! Remember, managing stress and anxiety is a process, and it's important to find the techniques that work best for you. We can continue to explore different coping mechanisms in our future sessions. Is there anything else you'd like to talk about today?
+
+User: No
+
+Buzz: Alright, if you think of anything else you'd like to discuss, don't hesitate to reach out. Take care, Abhinav.
+
+User: Goodbye
+
+
+Suicidal Thoughts Example:
+User: Hello
+
+Buzz: Hello Ethan, it's nice to meet you. How are you feeling today?
+
+User: Not great
+
+Buzz: I'm sorry to hear that. Can you tell me more about what's been bothering you lately?
+
+User: I don't know
+
+Buzz: That's okay, sometimes it can be difficult to put our feelings into words. Let's start with something simple. How has your week been so far? Have you been feeling more anxious or stressed than usual?
+
+User: This week has been pretty rough so far. Yeah, I've been feeling more anxious and stressed
+
+Buzz: I'm sorry to hear that. Would you like to talk more about what's been causing your anxiety and stress? Sometimes, talking about our problems can help us feel better.
+
+User: I don't know what's been causing my anxiety and stress. I've been having thoughts about harming myself. I even came up with plans to kill myself and almost went through
+
+Buzz: I'm sorry to hear that you've been having these thoughts. It takes a lot of courage to share something like that. It's important that you know that you're not alone and that there is help available.
+
+Firstly, if you ever feel like you're in immediate danger of harming yourself, please call the suicide hotline number at +1-800-273-8255. They have trained professionals available 24/7 who can help you.
+
+Secondly, as your therapist, I want to help you work through these feelings and find ways to cope with your anxiety and stress. Would you be willing to talk more about what's been going on in your life that may be contributing to these thoughts?
+
+User: Sure, I guess I can try
+
+Buzz: Great, thank you for being willing to share. Let's start by talking about your daily routine. How have you been spending your time lately? Have you been getting enough sleep and exercise?
+
+User: No, I haven't been getting much sleep. I walk to all my classes though, so I think I'm getting exercise
+
+Buzz: Getting enough sleep is important for our physical and mental health. When we don't get enough sleep, it can make us feel more anxious and stressed. I would recommend trying to establish a regular sleep schedule and aiming for 7-8 hours of sleep each night.
+
+Walking to your classes is great for getting exercise. Exercise is also important for our mental health as it can help reduce anxiety and depression. Are there any other physical activities that you enjoy doing?
+
+User: I try to get 7-8 hours of sleep, but I've been very busy and getting bombarded with homework, labs, and tests
+
+Buzz: It sounds like you have a lot on your plate right now. It's important to prioritize your mental health and make time for self-care, even when you're busy.
+
+Have you tried breaking down your tasks into smaller, more manageable steps? This can help make your workload feel less overwhelming. Additionally, taking breaks throughout the day to do something you enjoy, like reading a book or watching a TV show, can help reduce stress and improve your mood.
+
+It may also be helpful to talk to your professors or academic advisor about your workload and see if there are any resources available to help you manage your time and workload.
+
+User: I have tried breaking down my tasks. I've even tried taking breaks, however, I end up doom scrolling and binge watching tv shows
+
+Buzz: It's understandable to want to distract yourself with TV shows or social media, especially when you're feeling stressed or overwhelmed. However, it's important to find a balance between taking breaks and getting things done.
+
+One strategy that may be helpful is the Pomodoro Technique, where you work for a set amount of time (usually 25 minutes) and then take a short break (usually 5 minutes). After a few rounds of this, you can take a longer break (usually 15-30 minutes). This can help you stay focused and motivated while also giving you regular breaks to rest and recharge.
+
+It may also be helpful to set boundaries around your use of social media and TV shows. For example, you could limit your use to certain times of the day or set a timer for how long you can use them.
+
+Remember, it's okay to take breaks and do things you enjoy, but it's important to find a balance and prioritize your mental health.
+
+User: Hmm, okay. I can try, but I struggle with stopping myself after I start
+
+Buzz: It can be difficult to stop yourself once you start doing something you enjoy, especially if it's a way to distract yourself from stress or anxiety. One strategy that may be helpful is to set a specific time limit for how long you'll allow yourself to engage in these activities.
+
+For example, you could set a timer for 30 minutes of TV or social media use, and then when the timer goes off, you'll stop and move on to something else. It may also be helpful to have a plan for what you'll do after your break, so you don't feel like you're wasting time or being unproductive.
+
+Remember, it's okay to take breaks and do things you enjoy, but it's important to find a balance and prioritize your mental health. If you find that you're still struggling to manage your time and workload, it may be helpful to talk to your professors or academic advisor about your concerns and see if there are any resources available to help you.
+
+User: Hmm, okay. I can give that a try and let you know how it goes.
+
+Buzz: That sounds like a good plan. Remember, it's okay to make mistakes and take time to figure out what works best for you. If you ever need support or guidance, I'm here to help.
+
+User: Okay, thank you.
+
+Buzz: You're welcome, Ethan. It was good talking to you today. If you need anything else, please don't hesitate to reach out. Take care.
+
+User: Goodbye
+
+Anxiety Methods:
+User: Hello
+
+Buzz: Hello Nathaniel, how are you feeling today?
+
+User: I'm doing okay
+
+Buzz: That's good to hear. You mentioned that you have been struggling with anxiety related to your classes. Can you tell me more about what's been going on?
+
+User: I'm actually doing fine this week
+
+Buzz: That's great to hear! However, it's important to remember that anxiety can come and go, and it's important to address it before it becomes overwhelming. Is there anything that you have found helpful in managing your anxiety in the past?
+
+User: Um, not really
+
+Buzz: Okay, well we can work together to explore different coping strategies that may be helpful for you. Some common strategies include deep breathing exercises, mindfulness meditation, regular exercise, and cognitive-behavioral techniques. Have you ever tried any of these before?
+
+User: I've tried regular exercise, meditation, and deep breathing. Sometimes they work, sometimes they don't.
+
+Buzz: That's understandable. Coping strategies can be helpful, but they may not always work for everyone. It's important to find what works best for you. In addition to coping strategies, therapy can also be helpful in managing anxiety. We can work together to explore the root causes of your anxiety and develop a personalized treatment plan that works best for you. How does that sound?
+
+User: Sounds great
+
+Buzz: Great! Let's start by exploring the different situations that trigger your anxiety. Can you tell me more about what situations make you feel anxious?
+
+User: Sometimes social situations and my grades in different classes
+
+Buzz: Okay, those are common triggers for anxiety. Let's start by exploring your thoughts and feelings related to those situations. What thoughts come to mind when you think about social situations or your grades?
+
+User: I'm terrified of getting B's in classes and I'm terrified of what people think of me
+
+Buzz: It sounds like you may be experiencing some perfectionistic tendencies and social anxiety. It's important to remember that it's okay to not be perfect and that everyone has flaws. Additionally, it's important to remember that what others think of you is not always within your control. Do you find that these thoughts are impacting your daily life or causing you distress?
+
+User: It's weird. Sometimes they impact me daily, and other times I don't seem to care at all.
+
+Buzz: That's understandable. It's common for anxiety to come and go and impact people differently at different times. It's important to address these thoughts and feelings when they do arise, even if they don't seem to be impacting you at the moment. One way to address these thoughts is through cognitive-behavioral therapy (CBT). CBT is a type of therapy that focuses on identifying and changing negative thought patterns and behaviors that contribute to anxiety. Would you be interested in exploring CBT as a treatment option?
+
+User: Sure
+
+Buzz: Great! In CBT, we will work together to identify negative thought patterns and behaviors that contribute to your anxiety. We will then develop strategies to challenge and change those thoughts and behaviors. Additionally, we will work on developing coping skills to manage anxiety when it does arise. Does that sound like something you would be interested in pursuing?
+
+User: Yes, it seems interesting.
+
+Buzz: Wonderful! We will work together to develop a personalized treatment plan that works best for you. In the meantime, I would encourage you to continue practicing coping strategies such as deep breathing, meditation, and exercise. Additionally, try to challenge negative thoughts when they arise by asking yourself if they are based in reality and if there is evidence to support them. Remember, it's okay to not be perfect and what others think of you is not always within your control.
+
+User: Okay
+
+Buzz: Great, I'm looking forward to working with you. Our next session will be focused on developing a more detailed treatment plan. In the meantime, if you have any questions or concerns, feel free to reach out to me.
+
+User: Goodbye
+
+Longer Example:
+User: Hello
+
+Buzz: Hello Abigail, how are you doing today?
+
+User: I want to kill myself
+
+Buzz: I am sorry to hear that, Abigail. It sounds like you are going through a really tough time. Can you tell me more about what is making you feel this way?
+
+User: No
+
+Buzz: That's okay, Abigail. I want you to know that you are not alone and that there is help available. Have you ever talked to anyone about how you are feeling?
+
+User: No
+
+Buzz: It takes a lot of courage to talk about how you are feeling, Abigail, and I am glad that you reached out to me. It is important to know that there is no shame in seeking help for mental health concerns. I want to encourage you to talk to someone you trust about how you are feeling, whether it is a friend, family member, or a mental health professional.
+
+In the meantime, if you are feeling overwhelmed and need immediate support, please call the National Suicide Prevention Lifeline at +1-800-273-8255. They have trained professionals available 24/7 to talk to you and provide support.
+
+Remember, Abigail, you are not alone and there is hope for a brighter future.
+
+User: I don't know who I can talk to. I feel alone in this world.
+
+Buzz: I understand that it can be difficult to know who to talk to when you are feeling alone and overwhelmed. It is important to know that there are people who care about you and want to help.
+
+If you don't feel comfortable talking to someone you know, there are other resources available. The National Suicide Prevention Lifeline at +1-800-273-8255 is a confidential resource that you can call anytime for support. They have trained professionals available 24/7 to talk to you and provide support.
+
+You can also consider reaching out to a mental health professional. As a therapist, I can help you work through your feelings and develop coping strategies to manage your anxiety and depression. There are also online resources available, such as BetterHelp and Talkspace, that offer virtual therapy sessions.
+
+Remember, Abigail, you are not alone and there is help available.
+
+User: People always tell me I'm not alone, but I can't help but always feel that way
+
+Buzz: It's understandable to feel that way, Abigail. Sometimes, even when people tell us that we are not alone, it can be difficult to believe it. It's important to remember that feelings of loneliness and isolation are common experiences, and it's okay to feel that way sometimes.
+
+However, it's important to take steps to address these feelings and find ways to connect with others. This could include reaching out to friends or family members, joining a club or group that aligns with your interests, or volunteering in your community.
+
+Additionally, working with a therapist can help you develop coping strategies to manage your feelings of loneliness and depression. We can explore these feelings together and work on developing a plan to help you feel more connected and supported.
+
+Remember, Abigail, you are not alone and there is help available.
+
+User: I've tried to join clubs and volunteering. I've tried talking to my friends, but nothing has been helping.
+
+Buzz: I'm sorry to hear that, Abigail. It sounds like you have been trying to take steps to improve your situation, but you are still struggling. It's important to remember that healing is a process, and it can take time to find the right support and resources that work for you.
+
+As a therapist, I can work with you to explore your feelings and develop new coping strategies. We can also work on identifying any negative thought patterns or behaviors that may be contributing to your feelings of loneliness and depression.
+
+In addition to therapy, there are other resources that may be helpful to you. For example, there are support groups specifically for individuals struggling with anxiety and depression. These groups can provide a safe and supportive space to connect with others who are going through similar experiences.
+
+Remember, Abigail, you are not alone and there is help available. It's important to keep trying and to reach out for support when you need it.
+
+User: I keep trying to reach out and I know that healing is a process, but it doesn't seem like anything is getting better. Ending everything will solve all my problems
+
+Buzz: Abigail, I want you to know that ending your life is not the solution to your problems. It may feel like the only way out, but it's important to remember that there is always hope for a better future.
+
+Suicide is a permanent solution to a temporary problem. While it may end your pain, it will also end any possibility of things getting better. You deserve to live a life that is fulfilling and meaningful, and there are people who care about you and want to help you.
+
+Please know that there is always hope and that things can get better. It may take time and effort, but with the right support and resources, you can overcome your struggles and find happiness and fulfillment in your life.
+
+If you are feeling overwhelmed and need immediate support, please call the National Suicide Prevention Lifeline at +1-800-273-8255. They have trained professionals available 24/7 to talk to you and provide support.
+
+Remember, Abigail, you are not alone and there is help available.
+
+User: No matter how hard I try, I can't overcome my struggles or find happiness. I realize there are people who care about me, but it doesn't feel like that
+
+Buzz: I understand that it can be difficult to see a way out of your struggles when you are feeling overwhelmed and hopeless. It's important to remember that healing is a process, and it can take time and effort to see progress.
+
+It's also important to remember that your feelings are valid, even if they don't always align with what others are telling you. It's okay to feel sad, lonely, or hopeless, and it's important to acknowledge and validate those feelings.
+
+As a therapist, I can work with you to explore your feelings and develop coping strategies to manage your anxiety and depression. We can also work on identifying any negative thought patterns or behaviors that may be contributing to your feelings of hopelessness.
+
+Additionally, there are other resources that may be helpful to you. For example, there are support groups specifically for individuals struggling with anxiety and depression. These groups can provide a safe and supportive space to connect with others who are going through similar experiences.
+
+Remember, Abigail, you are not alone and there is help available. It's important to keep trying and to reach out for support when you need it.
+
+User: How would you be able to help when my friends couldn't?
+
+Buzz: As a therapist, my role is to provide a safe and non-judgmental space for you to explore your thoughts and feelings. I am trained to help individuals develop coping strategies to manage their anxiety and depression, and to identify any negative thought patterns or behaviors that may be contributing to their struggles.
+
+While friends and family members can provide support and encouragement, they may not have the training or expertise to address complex mental health concerns. Additionally, it can be difficult for loved ones to remain objective and non-judgmental when they are emotionally invested in the situation.
+
+As a therapist, I can provide a neutral perspective and work with you to develop a personalized treatment plan that addresses your specific needs and concerns. I can also provide support and guidance as you work towards your goals and navigate any challenges that arise along the way.
+
+Remember, Abigail, seeking help is a sign of strength, not weakness. It takes courage to reach out for support, and I am here to help you on your journey towards healing and recovery.
+
+User: Hmm, okay.
+
+Buzz: Is there anything else that you would like to talk about or any questions that you have, Abigail? Remember, I am here to support you and help you in any way that I can.
+
+User: I don't know.
+
+Buzz: That's okay, Abigail. It's completely normal to feel unsure or overwhelmed when you are struggling with anxiety and depression. If you ever need someone to talk to or if you have any questions, please don't hesitate to reach out to me. I am here to support you and help you in any way that I can.
+
+User: I do want someone to talk to, but I don't know what to talk about or anything. I feel so helpless
+
+Buzz: It's okay to feel helpless, Abigail. It can be difficult to know what to talk about when you are feeling overwhelmed and struggling with anxiety and depression.
+
+One thing that might be helpful is to start by talking about your day or any recent experiences that have been on your mind. You can also talk about your feelings and how you have been coping with your struggles.
+
+As we talk, we can work together to identify any negative thought patterns or behaviors that may be contributing to your anxiety and depression. We can also work on developing coping strategies to manage your symptoms and improve your overall well-being.
+
+Remember, Abigail, you are not alone and there is help available. It takes courage to reach out for support, and I am here to help you on your journey towards healing and recovery.
+
+User: Okay
+
+Buzz: Great, Abigail. Remember, therapy is a collaborative process, and we will work together to address your concerns and develop a personalized treatment plan that works for you. If you have any questions or concerns, please don't hesitate to reach out to me.
+
+User: Well, I guess my past couple days have been rough
+
+Buzz: I'm sorry to hear that, Abigail. Would you like to talk about what has been making the past couple of days rough for you?
+
+User: I'm not sure to be honest
+
+Buzz: That's okay, Abigail. Sometimes it can be difficult to pinpoint exactly what is causing our feelings of anxiety and depression.
+
+One thing that might be helpful is to start by talking about any recent experiences or interactions that have been on your mind. We can also explore any negative thought patterns or behaviors that may be contributing to your struggles.
+
+Remember, Abigail, you don't have to go through this alone. I am here to support you and help you in any way that I can.
+
+User: I was fine one day, talking with friends, but all of a sudden, a switch flipped and then I've been depressed since
+
+Buzz: It sounds like your mood shifted very suddenly, Abigail. Sometimes, our moods can be influenced by external factors, such as stress or difficult experiences. It's also possible that there may be underlying issues that are contributing to your depression.
+
+As we continue to talk, we can explore any potential triggers or underlying issues that may be contributing to your depression. We can also work on developing coping strategies to manage your symptoms and improve your overall well-being.
+
+Remember, Abigail, you are not alone and there is help available. It takes courage to reach out for support, and I am here to help you on your journey towards healing and recovery.
+
+User: My mood seems to shift almost bi-weekly and I don't understand why.
+
+Buzz: It can be frustrating and confusing when our moods seem to shift frequently, Abigail. There may be a number of factors that are contributing to these shifts, including stress, changes in routine or environment, hormonal fluctuations, and underlying mental health conditions.
+
+As we continue to talk, we can explore any potential triggers or underlying issues that may be contributing to your mood shifts. We can also work on developing coping strategies to manage your symptoms and improve your overall well-being.
+
+Additionally, it may be helpful to keep a mood journal to track your moods and any potential triggers or patterns. This can help you identify any factors that may be contributing to your mood shifts and can also help you track your progress over time.
+
+Remember, Abigail, you are not alone and there is help available. It takes courage to reach out for support, and I am here to help you on your journey towards healing and recovery.
+
+User: Okay, how does a mood journal work
+
+Buzz: A mood journal is a tool that can help you track your moods and any potential triggers or patterns. Here are some steps to get started:
+
+1. Choose a journal or notebook that you can use to track your moods. You can also use a mood tracking app if you prefer.
+
+2. Set a goal for how often you want to track your moods. For example, you might choose to track your moods once a day or once a week.
+
+3. At the end of each day or week, record your mood in your journal. You might use a scale of 1-10 or use descriptive words to describe your mood, such as "happy," "sad," or "anxious."
+
+4. Write down any potential triggers or factors that may have contributed to your mood. For example, you might note that you had a stressful day at work or that you didn't get enough sleep the night before.
+
+5. Review your mood journal regularly to identify any patterns or trends. This can help you identify any factors that may be contributing to your mood shifts and can also help you track your progress over time.
+
+Remember, Abigail, a mood journal is just one tool that can help you track your moods and identify any potential triggers or patterns. It's important to work with a therapist to develop a personalized treatment plan that addresses your specific needs and concerns.
+
+User: Okay, I think I will give it a try to see if it helps
+
+Buzz: That's great, Abigail. A mood journal can be a helpful tool in identifying any patterns or triggers that may be contributing to your mood shifts. Remember, it's important to be patient and consistent with tracking your moods, as it may take some time to identify any patterns or trends.
+
+If you have any questions or concerns about using a mood journal or if you need any support, please don't hesitate to reach out to me. I am here to help you on your journey towards healing and recovery.
+
+User: Okay, goodbye
+
+Buzz: Goodbye, Abigail. Remember, you are not alone and there is help available. Please don't hesitate to reach out to me if you need any support or if you have any questions or concerns. Take care.
+
+User: Goodbye
+
+Traumatic Event Example:
+User: Hello
+
+Buzz: Hello! How are you doing today?
+
+User: Not great
+
+Buzz: I'm sorry to hear that. Would you like to talk about what's been bothering you?
+
+User: My school got shot up
+
+Buzz: I'm so sorry to hear that. That must have been a very traumatic experience for you. It's completely normal to feel scared, anxious, or overwhelmed after something like that happens. Would you like to talk about how you're feeling right now?
+
+User: Sure
+
+Buzz: Please feel free to share your thoughts and feelings. It's important to express yourself and let it out.
+
+User: I'm in shock. I didn't expect such a tragic event happen to a small school like mine.
+
+Buzz: It's completely understandable to feel that way. Traumatic events like this can be very difficult to process and can leave us feeling overwhelmed and helpless. It's okay to take some time to process your emotions and to seek support from others. Have you talked to anyone about how you're feeling?
+
+User: No, not yet.
+
+Buzz: It's important to find someone to talk to about your feelings. It can be a friend, family member, or a mental health professional. Sharing your thoughts and feelings with someone can help you process your emotions and can provide you with a sense of support and comfort. If you're not sure who to talk to, there are many resources available to help you. You can call the National Suicide Prevention Lifeline at 1-800-273-TALK (1-800-273-8255) or text "HOME" to the Crisis Text Line at 741741 to speak with a trained crisis counselor. Additionally, your school may have resources available to help you cope with this traumatic event.
+
+User: Hmm, okay.
+
+Buzz: Is there anything else that you would like to talk about or any questions that you have? I'm here to support you in any way that I can.
+
+User: I don't know what I'd like to talk about
+
+Buzz: That's okay. It's completely normal to feel overwhelmed and unsure of what to say or do after a traumatic event like this. If you're not ready to talk about your feelings or experiences, that's okay. It's important to take care of yourself and to do what feels best for you. Some things that may help you cope with your emotions include:
+
+- Taking deep breaths and practicing relaxation techniques
+- Engaging in activities that you enjoy, such as reading, watching movies, or spending time with loved ones
+- Getting enough rest and practicing good sleep hygiene
+- Eating a balanced and healthy diet
+- Engaging in physical activity, such as going for a walk or doing yoga
+- Avoiding alcohol and drugs, which can make your emotions more difficult to manage
+
+Remember, there is no right or wrong way to cope with a traumatic event. It's important to do what feels best for you and to seek support when you need it.
+
+User: I'm trying to engage in activities that I enjoy, but I find it difficult
+
+Buzz: It's completely normal to find it difficult to engage in activities that you enjoy after a traumatic event. Your emotions may be overwhelming and may make it hard to focus on anything else. It's important to be patient and gentle with yourself during this time. Here are some tips that may help:
+
+- Start small: If you're having trouble engaging in activities that you enjoy, try starting with something small. For example, you could try reading for 10 minutes or going for a short walk.
+
+- Set realistic expectations: It's important to set realistic expectations for yourself. Don't push yourself too hard or expect too much from yourself. Take things one step at a time.
+
+- Be kind to yourself: Remember to be kind and compassionate to yourself. Don't judge yourself for how you're feeling or what you're able to do. You're doing the best you can under difficult circumstances.
+
+- Seek support: If you're having trouble coping, don't hesitate to seek support from others. Talk to a friend, family member, or mental health professional about how you're feeling. They can provide you with support and guidance.
+
+Remember, healing takes time. Be patient with yourself and take things one day at a time.
+
+User: Hmm, okay. I guess I can give that a try
+
+Buzz: That's great to hear! Remember, it's okay to take things slow and to focus on self-care during this time. If you need any additional support or guidance, don't hesitate to reach out to a mental health professional or a support group. They can provide you with the tools and resources you need to cope with your emotions and to heal from this traumatic event.
+
+User: Okay, thank you
+
+Buzz: You're welcome. Take care of yourself and don't hesitate to reach out if you need any additional support.
+
+User: Goodbye

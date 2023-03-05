@@ -5,7 +5,7 @@ Robo-Tech 2023 @ GT
 
 import serial
 
-enable_serial = True
+enable_serial = False
 
 if enable_serial:
     device = serial.Serial("/dev/cu.usbmodem144401", 9600)

@@ -69,6 +69,7 @@ def main():
                 today = now.date()
                 setup_tasks_for_day(day)
                 print("Setup tasks for", DAYS_OF_THE_WEEK[now.weekday()])
+                print(queue)
 
             # logic
             while len(queue) != 0:

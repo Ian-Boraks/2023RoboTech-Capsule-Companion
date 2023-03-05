@@ -26,8 +26,10 @@ def setup_tasks_for_day(day):
         temp.insert(1, "pills")
         queue.append(temp)
     
-    queue.append([day["therapist"], "therapist"])
-    queue.append([day["trainer"], "trainer"])
+    if len(day["therapist"]) > 0:
+        queue.append([day["therapist"], "therapist"])
+    if len(day["trainer"]) > 0:
+        queue.append([day["trainer"], "trainer"])
     queue.sort()
 
 

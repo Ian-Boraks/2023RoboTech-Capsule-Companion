@@ -27,47 +27,20 @@
     },
     "saturday": {
       "pills": [
-        [
-          "12:00",
-          ["cocaine", "advil"]
-        ],
-        [
-          "13:00",
-          ["tylenol", "cocaine"]
-        ],
-        [
-          "11:00",
-          ["cocaine"]
-        ]
+        ["12:00", ["cocaine", "advil"]],
+        ["13:00", ["tylenol", "cocaine"]],
+        ["11:00", ["cocaine"]]
       ],
       "therapist": "15:26",
       "trainer": "15:00"
     },
     "sunday": {
       "pills": [
-        [
-          "03:00",
-          [
-            "cocaine",
-            "advil",
-            "tylenol"
-          ]
-        ],
-        [
-          "02:00",
-          [
-            "advil",
-            "cocaine"
-          ]
-        ],
-        [
-          "01:00",
-          [
-            "cocaine"
-          ]
-        ]
+        ["03:00", ["cocaine", "advil", "tylenol"]],
+        ["07:39", ["advil", "cocaine"]],
+        ["01:00", ["cocaine"]]
       ],
-      "therapist": "15:26",
+      "therapist": "07:42",
       "trainer": "15:00"
     }
   },

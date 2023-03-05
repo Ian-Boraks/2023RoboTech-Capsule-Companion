@@ -14,12 +14,12 @@ from lib.chat import init_openai
 from lib.recognition import init_recognizer, run_command, run_therapy
 from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.comms import check_button, serial_write
-from lib.speech import init_google
+from lib.speech import init_google, say
 from lib.video import play_video
 
 config = {}
 
-load_config_from_file = False
+load_config_from_file = True
 
 today = None
 queue = []
@@ -79,7 +79,9 @@ def main():
                 if queue[0][0] <= datetime.now().strftime("%H:%M"):
                     current_task = queue.pop(0)
                     if current_task[1] == "pills":
-                        bit_array = [1 << config['pills'][pill] for pill in current_task[2]]
+                        if len(current_task[2]) > 0:
+                            say(f"It's time to take your {' and '.join(current_task[2])}")
+                        bit_array = [1 << config["pills"][pill] for pill in current_task[2]]
                         serial_write("pills", sum(bit_array))
                         sleep(10)
                     elif current_task[1] == "therapist":

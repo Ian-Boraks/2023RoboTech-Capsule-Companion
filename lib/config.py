@@ -5,7 +5,6 @@ Robo-Tech 2023 @ GT
 
 import re
 import speech_recognition as sr
-from datetime import time
 
 from .communication import serial_write
 from .recognition import transcribe
@@ -23,7 +22,7 @@ def gen_empty_config():
         }
     return config
 
-def create_pill_map(source: sr.AudioSource, pills_to_map: set):
+def create_servo_map(source: sr.AudioSource, pills_to_map: set):
     pills = {}
     container = 0
     for pill in pills_to_map:
@@ -49,29 +48,46 @@ def get_input(source: sr.AudioSource, prompt: str, split=False):
         return [i.lower() for i in re.sub("[,.!?]", "", text).split(" ") if len(i) > 0]
     return text
 
+def get_time_input(source: sr.AudioSource, prompt: str):
+    digits = []
+    while len(digits) < 4:
+        digits = get_input(source, prompt)
+        digits = [int(i) for i in digits if i.isdigit()]
+    hour = min(digits[0] * 10 + digits[1], 23)
+    minute = min(digits[2] * 10 + digits[3], 59)
+    return f"{hour:02d}:{minute:02d}"
+
 def setup_config(source: sr.AudioSource):
     config = gen_empty_config()
-    say("Thank you for choosing BUZZ as your trusted personal helper.")
-    say("We are going to start setup now.")
+    say("Thank you for choosing BUZZ as your trusted personal helper. We are going to start setup now.")
 
     days = get_input(source, "What days do you take medications?", split=True)
     days = [i for i in days if i in DAYS_OF_THE_WEEK]
 
-    pills_to_map = set()
+    pill_set = set()
     for i in days:
-        day = config["schedule"][i]
+        time_map = {}
         
         pills = get_input(source, f"What medication do you take on {i}?", split=True)
-        pills = [j for j in pills if j != "and"]
+        pills = [j for j in pills if j != "and" and j != "in"]
         for pill in pills:
-            timelist = []
-            while len(timelist) < 4:
-                timelist = get_input(source, f"What time do you take {pill}?")
-                timelist = [int(j) for j in timelist if j.isdigit()]
-            hour = timelist[0] * 10 + timelist[1]
-            minute = timelist[2] * 10 + timelist[3]
+            time = get_time_input(source, f"What time do you take {pill}?")
+
+            if time in time_map:
+                time_map[time].append(pill)
+            else:
+                time_map[time] = [pill]
             
-            day["pills"].append([f"{hour}:{minute}", pill])
-            pills_to_map.add(pill)
+            pill_set.add(pill)
         
-    config["pills"] = create_pill_map(source, pills_to_map)
+        for j in time_map:
+            config["schedule"][i]["pills"].append([j, time_map[j]])
+    
+    days = get_input(source, "Moving on. What days would you like a therapy session?", split=True)
+    days = [i for i in days if i in DAYS_OF_THE_WEEK]
+    for i in days:
+        config["schedule"][i]["therapist"] = get_time_input(f"What time would you like your session on {i}?")
+        
+    config["pills"] = create_servo_map(source, pill_set)
+
+    return config

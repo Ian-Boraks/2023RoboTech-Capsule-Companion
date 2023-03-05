@@ -12,6 +12,7 @@ from lib.chat import init_openai
 from lib.recognition import init_recognizer, run_command, run_therapy
 from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.communication import serial_write
+from lib.speech import init_google
 from time import sleep
 
 config = {}
@@ -45,6 +46,7 @@ if __name__ == "__main__":
     with sr.Microphone() as source:
         init_recognizer(source)
         init_openai()
+        init_google()
 
         sleep(1.5)
 

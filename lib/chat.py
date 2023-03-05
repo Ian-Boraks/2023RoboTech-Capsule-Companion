@@ -35,12 +35,3 @@ def add_message(message: str):
 def reset_messages():
   global messages
   messages = messages_init
-
-
-# init_openai()
-# while True:
-#   msg = input(">>> ")
-#   if msg == "quit":
-#     break
-#   else:
-#     print(add_message(msg))

@@ -5,10 +5,10 @@ Robo-Tech 2023 @ GT
 
 import serial
 
-enable_serial = False
+enable_serial = True
 
 if enable_serial:
-    device = serial.Serial("/dev/cu.usbmodem21201", 9600)
+    device = serial.Serial("/dev/cu.usbmodem144401", 9600)
 
 '''
 This function will serialize the data in a format our Arduino understands

@@ -29,7 +29,7 @@
       "pills": [
         [
           "12:00",
-          ["xanax", "advil"]
+          ["cocaine", "advil"]
         ],
         [
           "13:00",
@@ -52,7 +52,6 @@
   "pills": {
     "cocaine": 0,
     "advil": 1,
-    "tylenol": 2,
-    "xanax": 3
+    "tylenol": 2
   }
 }

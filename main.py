@@ -77,7 +77,7 @@ def main():
                     if current_task[1] == "pills":
                         bit_array = [1 << config['pills'][pill] for pill in current_task[2]]
                         serial_write("pills", sum(bit_array))
-                        sleep(5)
+                        sleep(10)
                     elif current_task[1] == "therapist":
                         run_therapy(source, current_task[0])
                     elif current_task[1] == "trainer":

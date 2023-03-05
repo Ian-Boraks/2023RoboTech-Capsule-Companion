@@ -207,3 +207,20 @@ That's great to hear! I'm glad you're feeling good today. How has your week been
 
 >>> hello, i have attempted suicide in the past, but i'm feeling pretty good for the past week
 Hello, I'm glad to hear that you've been feeling good for the past week. It's important to acknowledge and celebrate the moments when we feel good, especially when we've struggled with mental health issues in the past. Can you tell me more about what's been contributing to your good mood lately?
+
+>>> hello
+Hello! How are you feeling today?
+>>> not great
+I'm sorry to hear that. Would you like to talk about what's been bothering you?
+>>> idk
+That's okay. Sometimes it can be difficult to put our thoughts and feelings into words. Would you like me to ask you some questions to help get the conversation started?
+>>> yes
+Great. Can you tell me a little bit about what's been going on in your life lately?
+>>> i've been doing homework and attending classes. for the past couple days i've been doing a hackathon. i probably should've been getting more sleep, but at the same time i don't feel like it.
+It sounds like you've been really busy with schoolwork and the hackathon. It's understandable that you might be feeling tired and stressed. Are you finding it difficult to manage your time and balance your responsibilities?
+>>> a little bit? i feel like i'd be able to do it if i wasn't so depressed
+It's understandable that depression can make it difficult to manage responsibilities and everyday tasks. Are you comfortable talking about what's been causing your depression?
+>>> kind of? i also don't know what's causing it. the reason almost always changes every other week
+That's understandable. Depression can be caused by a variety of factors, and it's not uncommon for the reason to change over time. Have you noticed any patterns or triggers that seem to make your depression worse?
+>>> no, not really
+That's okay. Sometimes it can be difficult to identify triggers or patterns on our own. Have you considered talking to a mental health professional about your depression? They can help you identify potential triggers and develop coping strategies to manage your symptoms.

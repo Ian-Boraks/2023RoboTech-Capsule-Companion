@@ -1,5 +1,4 @@
 import cv2
-import threading
 
 def play_video():
     video = cv2.VideoCapture('assets/wave.mp4')
@@ -31,6 +30,3 @@ def play_video():
 
     video.release()
     cv2.destroyAllWindows()
-
-def init_video():
-    threading.Thread(target=play_video).start()

@@ -22,12 +22,15 @@ def init_recognizer(source: sr.AudioSource):
     print("Adjusting...")
     r.adjust_for_ambient_noise(source, duration=1)
 
-def transcribe(source: sr.AudioSource, beep=False):
+def transcribe(source: sr.AudioSource, beep=False, setup=False):
     if beep:
         afile = AudioSegment.from_wav("assets/beep.wav")
         play(afile)
     print("Listening...")
-    audio = r.listen(source)
+    if setup:
+        audio = r.listen(source, phrase_time_limit=5)
+    else:
+        audio = r.listen(source)
     with open("temp.wav", "wb") as f:
         f.write(audio.get_wav_data())
         f.flush()
@@ -57,13 +60,14 @@ def handle_therapy(text: str):
         reset_messages()
         say("ending session")
         return "idle"
+        
     print("Generating Response...")
     res = add_message(text)
     print("Response:", res)
     say(res)
     return "therapy"
 
-def run_therapy(source: sr.AudioSource, time: str):
+def run_therapy(source: sr.AudioSource, time: str, first_time=False):
     hour = int(time[:2])
     timestr = ""
     if hour > 11:
@@ -75,9 +79,13 @@ def run_therapy(source: sr.AudioSource, time: str):
     global state
     state = "therapy"
     while state != "idle":
-        text = transcribe(source)
-        if text:
-            state = handle_therapy(text)
+        if first_time:
+            state = handle_therapy("Hello")
+            first_time = False
+        else:
+            text = transcribe(source)
+            if text:
+                state = handle_therapy(text)
 
 def run_command(source: sr.AudioSource):
     global state

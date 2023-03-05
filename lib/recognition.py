@@ -8,6 +8,11 @@ from .chat import add_message, reset_messages
 from .speech import say
 
 r = sr.Recognizer()
+'''
+Designed by The Psychedelic Psychiatrist
+Robo-Tech 2023 @ GT
+'''
+
 model = whisper.load_model("small.en")
 
 state = "idle"

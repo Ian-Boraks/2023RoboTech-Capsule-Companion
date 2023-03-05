@@ -1,3 +1,8 @@
+'''
+Designed by The Psychedelic Psychiatrist
+Robo-Tech 2023 @ GT
+'''
+
 import datetime as dt
 from zoneinfo import ZoneInfo
 import time_machine

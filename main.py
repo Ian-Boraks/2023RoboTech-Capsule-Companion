@@ -1,3 +1,8 @@
+'''
+Designed by The Psychedelic Psychiatrist
+Robo-Tech 2023 @ GT
+'''
+
 import json
 import speech_recognition as sr
 from dotenv import load_dotenv

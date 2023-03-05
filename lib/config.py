@@ -1,3 +1,8 @@
+'''
+Designed by The Psychedelic Psychiatrist
+Robo-Tech 2023 @ GT
+'''
+
 import re
 import speech_recognition as sr
 from datetime import time

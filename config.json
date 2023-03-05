@@ -35,12 +35,8 @@
       "trainer": "15:00"
     },
     "sunday": {
-      "pills": [
-        ["03:00", ["cocaine", "advil", "tylenol"]],
-        ["07:39", ["advil", "cocaine"]],
-        ["01:00", ["cocaine"]]
-      ],
-      "therapist": "07:42",
+      "pills": [],
+      "therapist": "",
       "trainer": "15:00"
     }
   },

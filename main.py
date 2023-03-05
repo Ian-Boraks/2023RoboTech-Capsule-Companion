@@ -5,14 +5,17 @@ Robo-Tech 2023 @ GT
 
 import json
 import speech_recognition as sr
+import threading
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
+from time import sleep
 
 from lib.chat import init_openai
 from lib.recognition import init_recognizer, run_command, run_therapy
 from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.communication import serial_write
-from time import sleep
+from lib.speech import init_google
+from lib.video import play_video
 
 config = {}
 
@@ -39,12 +42,15 @@ def setup_tasks_for_day(day):
     queue.sort()
 
 
-if __name__ == "__main__":
-    load_dotenv()
+def main():
+    global config, today, queue
 
     with sr.Microphone() as source:
         init_recognizer(source)
         init_openai()
+        init_google()
+
+        sleep(1.5)
 
         if load_config_from_file:
             with open("config.json") as config_json:
@@ -58,7 +64,6 @@ if __name__ == "__main__":
                 run_command(source)
 
             now = datetime.now()
-
             if now.date() != today:
                 day = config["schedule"][DAYS_OF_THE_WEEK[now.weekday()]]
                 today = now.date()
@@ -66,7 +71,6 @@ if __name__ == "__main__":
                 print("Setup tasks for", DAYS_OF_THE_WEEK[now.weekday()])
 
             # logic
-            print(queue)
             while len(queue) != 0:
                 if queue[0][0] <= datetime.now().strftime("%H:%M"):
                     current_task = queue.pop(0)
@@ -80,3 +84,12 @@ if __name__ == "__main__":
                         continue
                 else:
                     break
+
+
+if __name__ == "__main__":
+    load_dotenv()
+
+    threading.Thread(target=main).start()
+
+    play_video()
+    

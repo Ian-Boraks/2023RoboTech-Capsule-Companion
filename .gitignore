@@ -3,3 +3,5 @@ venv
 temp.wav
 __pycache__
 .env
+.DS_STORE
+service-account-key.json

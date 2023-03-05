@@ -1,3 +1,8 @@
+'''
+Designed by The Psychedelic Psychologist
+Robo-Tech 2023 @ GT
+'''
+
 import speech_recognition as sr
 import whisper
 import sys
@@ -8,10 +13,6 @@ from .chat import add_message, reset_messages
 from .speech import say
 
 r = sr.Recognizer()
-'''
-Designed by The Psychedelic Psychologist
-Robo-Tech 2023 @ GT
-'''
 
 model = whisper.load_model("small.en")
 

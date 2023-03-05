@@ -46,6 +46,8 @@ if __name__ == "__main__":
         init_recognizer(source)
         init_openai()
 
+        sleep(1.5)
+
         if load_config_from_file:
             with open("config.json") as config_json:
                 config = json.load(config_json)

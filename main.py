@@ -7,13 +7,14 @@ import json
 import speech_recognition as sr
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
+from time import sleep
 
 from lib.chat import init_openai
 from lib.recognition import init_recognizer, run_command, run_therapy
 from lib.config import setup_config, DAYS_OF_THE_WEEK
 from lib.communication import serial_write
 from lib.speech import init_google
-from time import sleep
+from lib.video import init_video
 
 config = {}
 
@@ -47,6 +48,7 @@ if __name__ == "__main__":
         init_recognizer(source)
         init_openai()
         init_google()
+        init_video()
 
         sleep(1.5)
 

@@ -1,6 +1,8 @@
-def play_video():
+import cv2
+import threading
 
-    video = cv2.VideoCapture('wave.mp4')
+def play_video():
+    video = cv2.VideoCapture('assets/wave.mp4')
 
     cv2.namedWindow('Video', cv2.WINDOW_NORMAL)
 
@@ -30,8 +32,5 @@ def play_video():
     video.release()
     cv2.destroyAllWindows()
 
-if __name__=="__main__":
-    import threading
-    import time
-    import cv2
-    play_video()
+def init_video():
+    threading.Thread(target=play_video).start()

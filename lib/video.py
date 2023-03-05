@@ -1,33 +1,62 @@
+import tkinter as tk
 import cv2
-import subprocess
+from PIL import Image, ImageTk
 
-def display_fullscreen_window():
-    # Set the screen resolution to the MacBook's Retina display resolution
-    subprocess.call(["/usr/bin/osascript", "-e", "tell application \"System Events\" to tell process \"Finder\" to set frontmost to true"])
-    subprocess.call(["/usr/bin/osascript", "-e", "tell application \"System Events\" to keystroke \"j\" using {command down, shift down}"])
-    subprocess.call(["/usr/bin/osascript", "-e", "tell application \"System Events\" to keystroke \"2\" using {shift down}"])
-    subprocess.call(["/usr/bin/osascript", "-e", "tell application \"System Events\" to keystroke return"])
+def create_fullscreen_window():
+    # Initialize the tkinter window
+    root = tk.Tk()
 
-    # Load the video file
-    video = cv2.VideoCapture('path/to/video/file')
+    # Set the window to fullscreen
+    root.attributes("-fullscreen", True)
 
-    # Create a window and set it to fullscreen
-    cv2.namedWindow('fullscreen', cv2.WINDOW_NORMAL)
-    cv2.setWindowProperty('fullscreen', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    # Hide the mouse cursor
+    root.config(cursor="none")
 
-    # Loop through the frames and display them in the fullscreen window
-    while True:
-        ret, frame = video.read()
+    # Create a canvas in the window to display content
+    canvas = tk.Canvas(root, width=root.winfo_screenwidth(), height=root.winfo_screenheight())
+    canvas.pack()
+
+    # Set the video file path
+    video_path = "wave.mp4"
+
+    # Initialize the video capture object
+    cap = cv2.VideoCapture(video_path)
+
+    # Loop the video
+    def loop_video():
+        # Read a frame from the video
+        ret, frame = cap.read()
+
+        # Check if the frame was read successfully
         if not ret:
-            break
-        cv2.imshow('fullscreen', frame)
-        if cv2.waitKey(1) == ord('q'):  # Press 'q' to exit
-            break
+            # Restart the video if the end is reached
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+            return
 
-    # Release the video and destroy the window
-    video.release()
-    cv2.destroyAllWindows()
+        # Convert the frame to RGB format and resize it to fit the canvas
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frame = cv2.resize(frame, (root.winfo_screenwidth(), root.winfo_screenheight()))
 
+        # Create a PIL image object from the frame
+        image = Image.fromarray(frame)
 
-if __name__=='__main__':
-    display_fullscreen_window()
+        # Create a Tkinter-compatible photo image from the PIL image object
+        photo = ImageTk.PhotoImage(image=image)
+
+        # Display the photo on the canvas
+        canvas.create_image(0, 0, anchor=tk.NW, image=photo)
+
+        # Schedule the next frame update
+        root.after(1, loop_video)
+
+    # Start the video loop
+    loop_video()
+
+    # Return the tkinter window and canvas objects
+    return root, canvas
+
+if __name__ == "__main__":
+    root, canvas = create_fullscreen_window()
+
+    # Start the tkinter main loop
+    root.mainloop()

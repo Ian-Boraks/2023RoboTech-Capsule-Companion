@@ -46,14 +46,18 @@ void loop()
         {
           servoControl[i] = 1;
           servos[i].write(0);
-          delay(TURN_TIME);
-          servos[i].write(90);
         }
         else if (!bitRead(command, i) && servoControl[i])
         {
           servoControl[i] = 0;
           servos[i].write(180);
-          delay(TURN_TIME);
+        }
+      }
+      delay(turnTime);
+      for (int i = 0; i < 6; i++)
+      {
+        if (servoControl[i])
+        {
           servos[i].write(90);
         }
       }
@@ -75,9 +79,12 @@ void loop()
         {
           servoControl[i] = 0;
           servos[i].write(180);
-          delay(TURN_TIME);
-          servos[i].write(90);
         }
+      }
+      delay(turnTime);
+      for (int i = 0; i < 6; i++)
+      {
+        servos[i].write(90);
       }
       break;
     default:

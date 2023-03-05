@@ -1,9 +1,9 @@
-#include <Servo.h>
-
 /*
-Designed by The Psychedelic Psychiatrist
+Designed by The Psychedelic Psychologist
 Robo-Tech 2023 @ GT
 */
+
+#include <Servo.h>
 
 #define bitRead(value, bit) (((value) >> (bit)) & 0b01)
 #define opCode(value) (((value) >> (6)))

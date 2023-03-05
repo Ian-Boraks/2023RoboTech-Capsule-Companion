@@ -9,7 +9,7 @@ from .speech import say
 
 r = sr.Recognizer()
 '''
-Designed by The Psychedelic Psychiatrist
+Designed by The Psychedelic Psychologist
 Robo-Tech 2023 @ GT
 '''
 

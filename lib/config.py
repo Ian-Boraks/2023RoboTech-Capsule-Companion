@@ -6,7 +6,7 @@ Robo-Tech 2023 @ GT
 import re
 import speech_recognition as sr
 
-from .communication import serial_write
+from .comms import serial_write
 from .recognition import transcribe
 from .speech import say
 

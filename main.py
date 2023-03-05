@@ -13,7 +13,7 @@ from time import sleep
 from lib.chat import init_openai
 from lib.recognition import init_recognizer, run_command, run_therapy
 from lib.config import setup_config, DAYS_OF_THE_WEEK
-from lib.communication import serial_write
+from lib.comms import check_button, serial_write
 from lib.speech import init_google
 from lib.video import play_video
 
@@ -23,6 +23,8 @@ load_config_from_file = False
 
 today = None
 queue = []
+
+prev_button = False
 
 def setup_tasks_for_day(day):
     for task in day["pills"]:
@@ -43,7 +45,7 @@ def setup_tasks_for_day(day):
 
 
 def main():
-    global config, today, queue
+    global config, today
 
     with sr.Microphone() as source:
         init_recognizer(source)
@@ -59,9 +61,10 @@ def main():
             config = setup_config(source)
         
         while True:
-            command = False # check button press from serial
-            if command:
+            button = check_button()
+            if button and not prev_button: # rising edge
                 run_command(source)
+            prev_button = button
 
             now = datetime.now()
             if now.date() != today:

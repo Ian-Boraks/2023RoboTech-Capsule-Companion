@@ -6,8 +6,8 @@ Robo-Tech 2023 @ GT
 import datetime as dt
 from zoneinfo import ZoneInfo
 import time_machine
+from lib.comms import serial_write
 from lib.config import gen_empty_config, DAYS_OF_THE_WEEK
-from lib.communication import serial_write
 
 est_tz = ZoneInfo("America/New_York")
 today = dt.datetime.now()

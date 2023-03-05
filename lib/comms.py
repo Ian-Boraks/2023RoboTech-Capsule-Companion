@@ -28,3 +28,10 @@ def serial_write(mode, data):
     print(b.to_bytes(1, "big"))
     if enable_serial:
         device.write(b.to_bytes(1, "big"))
+
+def check_button():
+    if enable_serial:
+        if device.in_waiting > 0:
+            device.read_all()
+            return True
+    return False

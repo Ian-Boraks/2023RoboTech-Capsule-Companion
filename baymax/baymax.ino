@@ -53,13 +53,10 @@ void loop()
           servos[i].write(180);
         }
       }
-      delay(turnTime);
+      delay(TURN_TIME);
       for (int i = 0; i < 6; i++)
       {
-        if (servoControl[i])
-        {
-          servos[i].write(90);
-        }
+        servos[i].write(90);
       }
       break;
     case 2:
@@ -81,7 +78,7 @@ void loop()
           servos[i].write(180);
         }
       }
-      delay(turnTime);
+      delay(TURN_TIME);
       for (int i = 0; i < 6; i++)
       {
         servos[i].write(90);

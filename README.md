@@ -27,6 +27,9 @@ We decided to use woodworking as our main means of making our project. This was 
 
 This was the first time working with an Arduino for most of our team members. It was an amazing project to learn about servos and serial communication protocols.
 
+## Code
+[Code Readme](CODE.md)
+
 # Features
 
 Personalized therapy sessions: The therapist bot uses natural language processing and machine learning algorithms to provide customized therapy sessions based on user input.
